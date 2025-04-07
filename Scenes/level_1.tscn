@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1ismnsbjwyuk"]
+
+[ext_resource type="Texture2D" uid="uid://vd5ys2jpbc26" path="res://Textures/terrain.jpg" id="1_8ffim"]
+[ext_resource type="PackedScene" uid="uid://c8gj0o6aounwl" path="res://Scenes/playable_character.tscn" id="1_vk57k"]
+[ext_resource type="PackedScene" uid="uid://pnl77df8h2j5" path="res://Scenes/crate_color.tscn" id="3_xfk5q"]
+[ext_resource type="PackedScene" uid="uid://c57nlyx80i5kl" path="res://Scenes/stairs.tscn" id="4_7p6j4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xfk5q"]
+albedo_texture = ExtResource("1_8ffim")
+uv1_triplanar = true
+
+[sub_resource type="Sky" id="Sky_evi0p"]
+
+[sub_resource type="Environment" id="Environment_lsmp6"]
+background_energy_multiplier = 1.1
+sky = SubResource("Sky_evi0p")
+fog_mode = 1
+fog_light_color = Color(0.46582, 0.500497, 0.554995, 1)
+fog_light_energy = 0.66
+fog_density = 1.0
+
+[node name="level1" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+material_overlay = SubResource("StandardMaterial3D_xfk5q")
+use_collision = true
+size = Vector3(100, 0.2, 100)
+
+[node name="playableCharacter" parent="." instance=ExtResource("1_vk57k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10738, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.24375, -0.874361, 0.419618, 0, 0.432668, 0.901553, -0.969838, -0.219754, 0.105463, 10.5319, 9.99749, -12.888)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_lsmp6")
+
+[node name="crate-color" parent="." instance=ExtResource("3_xfk5q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.1, -2)
+
+[node name="crate-color2" parent="." instance=ExtResource("3_xfk5q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 0.1, -3)
+
+[node name="crate-color3" parent="." instance=ExtResource("3_xfk5q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2.63205, -0.0902245, -0.328568)
+
+[node name="stairs" parent="." instance=ExtResource("4_7p6j4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89164, 0.0999999, -7.9979)

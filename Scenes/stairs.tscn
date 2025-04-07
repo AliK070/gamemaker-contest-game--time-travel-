@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=4 uid="uid://c57nlyx80i5kl"]
+
+[ext_resource type="Texture2D" uid="uid://c37l1idyclgnf" path="res://Textures/colormap.png" id="1_aiuvb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwrbi"]
+resource_name = "colormap"
+cull_mode = 2
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cig0d"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1, 1),
+"format": 34896613377,
+"index_count": 108,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAwABAAAAAAAEAAMABQAEAAAABAAFAAMAAAAGAAUAAgAGAAAABQAGAAcABwAIAAUACQAHAAYAAgAJAAYACgAIAAcACAAKAAUAAwAFAAoABwAJAAoAAwALAAIACwADAAoAAgALAAwACgAMAAsAAgANAAkADAANAAIACgAJAA4ADgAPAAoADwAQAAoAEAAPAA4ACgAQAAwAEQAOAAkADQARAAkADgARABAADQASABEAEgANAAwAEAARABIADAATABIAEgATABAAEAATAAwA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("AAD/PwAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAP//AAAAAP8///8AAP8//z///wAA/z//PwAAAAD/P/9/AAAAAP8//3///wAA/3//fwAAAAD/f/9///8AAP//AAD//wAA////////AAD/////AAAAAP9//78AAAAA/3//v///AAD/v/+///8AAP+//78AAAAA/7///wAAAAD/v/////8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7mgny"]
+resource_name = "stairs_stairs"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1, 1),
+"attribute_data": PackedByteArray("/3fL7P93mPn/d5j5/3fL7P93/9//d//f/3dlxv93MtP/dzLT/3dlxv93mPn/d5j5/3fL7P93y+z/d5j5/3eY+f93mPn/d5j5/3dlxv93Zcb/d5j5/3eY+f93Zcb/d2XG/3dlxv93Zcb/dzLT/3dlxv93Zcb/d//f/3cy0/93mPn/d5j5/3fL7P93/9//d8vs/3fL7P93y+z/d8vs/3fL7P93y+z/d8vs/3f/3/93/9//d//f/3f/3/93/9//d//f/3f/3/93/9//dzLT/3cy0/93MtP/dzLT/3cy0/93MtP/dzLT/3cy0/93Zcb/d2XG"),
+"format": 34896613399,
+"index_count": 108,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAgAEAAMABAAFAAMAAgAGAAQABgAHAAQABwAIAAQABgAJAAcACgALAAwADAANAAoADgAPABAAEAARAA4AEgATABQAFAAVABIAFgAXABgAGAAZABYAGgAbABwAHQAaABwAHgAaAB0AHQAcAB8AHwAgAB0AIAAhAB0AIgAdACEAIwAhACAAJAAlACYAJgAnACQAKAApACoAKgArACgALAAtAC4ALgAvACwAMAAxADIAMgAzADAANAA1ADYANgA3ADQAOAA5ADoAOgA7ADgA"),
+"material": SubResource("StandardMaterial3D_qwrbi"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 60,
+"vertex_data": PackedByteArray("AAD/PwAA//8AAAAAAAD/////AAAAAP///z//PwAA////f/9/AAD///8//38AAP///////wAA////v/+/AAD///9//78AAP///7///wAA//8AAAAA////vwAAAAAAAP+/AAD/PwAA/78AAP8/////vwAAAAD///+///8AAP///7///wAAAAD/vwAAAAAAAP+//////////7//////AAD/v///AAAAAP+///8AAP///7//v///AAD///////8AAP//////////////v/////////+//7///wCA/7//////AID///////8AgP9//3///wCA/3//v///AID//wAA//8AgAAAAAD//wCA/z//P///AID/P/9///8AgAAA/z///wCAAAD/PwAA////P/8/AAD///8//z//////AAD/P///////P/8/////v/8//z8AAP+//z//fwAA/7//P/9/////v/8//38AAP///3//fwAA////f/9///////8//3///////3//f////7//f/9/AAD/v/9//78AAP+//3//v////7//f/+/AAD///+//78AAP///7//v///////f/+///////+//7////+//7//vwAA/7//v///AAD/v/+///////+//3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9///8AAP9/AAD/fwAA/38AAP9//38AAP9/AAD/fwAA/38AAP9//7//f/+//3//v/9//7//f////3////9/////f////3////9/////f////3////9/////f////3//v/9//7//f/+//3//v/9/////f////3////9/////f/+//3//v/9//7//f/+//3////9/////f////3////9//7//f/+//3//v/9//7//f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_cig0d")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qbift"]
+albedo_texture = ExtResource("1_aiuvb")
+albedo_texture_force_srgb = true
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tl8cb"]
+points = PackedVector3Array(0.5, 1, 0.5, 0.5, 1, -0.5, 0.249902, 1, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, 0.249902, 1, -0.5, -0.250098, 0.499902, 0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, -0.250098, 0.499902, -0.5, -0.5, 0.249902, 0.5, -0.5, 0.249902, -0.5)
+
+[node name="stairs" type="StaticBody3D"]
+
+[node name="stairs" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0, 0)
+mesh = SubResource("ArrayMesh_7mgny")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_qbift")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_tl8cb")

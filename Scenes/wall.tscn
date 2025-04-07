@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=4 uid="uid://dtv7kim7u6dlk"]
+
+[ext_resource type="Texture2D" uid="uid://c37l1idyclgnf" path="res://Textures/colormap.png" id="1_d155t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o52ei"]
+resource_name = "colormap"
+cull_mode = 2
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_51u0x"]
+_surfaces = [{
+"aabb": AABB(-0.1, 0, -0.5, 0.2, 1, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAwABAAAAAgAEAAAAAAAFAAMAAwAGAAIABwAFAAAAAwAFAAcAAAAEAAcABwAGAAMABwAEAAIAAgAGAAcA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("////////AAD/////AAAAAP//AAAAAAAAAAD//wAAAAD//wAA//8AAAAA/////wAAAAAAAAAAAAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dit1k"]
+resource_name = "wall_wall"
+_surfaces = [{
+"aabb": AABB(-0.1, 0, -0.5, 0.2, 1, 1),
+"attribute_data": PackedByteArray("/3dlxv93Zcb/d5j5/3eY+f93Zcb/d5j5/3eY+f93Zcb/d5j5/3eY+f93Zcb/d2XG/3dlxv93mPn/d5j5/3dlxv93mPn/d5j5/3eY+f93mPn/d2XG/3dlxv93Zcb/d2XG"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_o52ei"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////////7//////AAD/v///AAAAAP+///8AAP///78AAP//AAD//wAAAAAAAP////8AAAAA////////AAD//wAAAAD///+/AAAAAAAA/78AAP//AAD/vwAA//////+/////////AID//wAA//8AgAAAAAD//wCAAAD/////AIAAAAAA////v///AAD///+///8AAAAA/78AAAAAAAD/vwAA//8AAP///////wAA/////////////wAA/////////38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f////3////9/////f////3////9/////f////3///wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_51u0x")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yjehn"]
+albedo_texture = ExtResource("1_d155t")
+albedo_texture_force_srgb = true
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_d155t"]
+points = PackedVector3Array(0.1, 1, 0.5, -0.1, 1, 0.5, 0.1, 0, 0.5, 0.1, 1, -0.5, -0.1, 1, -0.5, -0.1, 0, 0.5, 0.1, 0, -0.5, -0.1, 0, -0.5)
+
+[node name="wall" type="StaticBody3D"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+
+[node name="wall" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_dit1k")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_yjehn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_d155t")
